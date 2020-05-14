@@ -1,8 +1,9 @@
 # AppNote
-### version : 1.0.1
+### version : Alpha 0.0.1
 ### create by Evoes
-### Update : 
+### Update :  NEW VERSION Alpha 0.0.1 
+             The version is currently very basic
+             it allows you to write notes to a non-operational backup system
 
-## WIKI
-* **Can you help ?** -  - [Discord](https://discord.gg/Q4FUYe) and [Wiki]()
+
 
