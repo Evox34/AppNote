@@ -26,6 +26,7 @@ def appuit(event) :
 
 
 class Sav():
+	#no-operational backup system
     def __init__(self,TextList,Numéro):
         self.textlist = TextList
         self.number = Numéro
@@ -47,7 +48,7 @@ def Supp(event) :
 # messagebox question
 
 def Show() :
-    result = messagebox.askquestion("Exit programe", "Are You Sure?", icon='warning')
+    result = messagebox.askquestion("Exit programe", "Vous voulez quittez le programe?", icon='warning')
     if result == 'yes' :
         print("Programe stoper")
         app.quit()
