@@ -6,4 +6,7 @@
  # it allows you to write notes to a no-operational backup system
 
 
+## Planned :
+### Systeme sav 
+### Syteme remove 
 
