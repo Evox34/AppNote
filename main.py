@@ -56,8 +56,8 @@ def Show() :
 # creation folder
 
 
-Entrer = Label(text="Bienvenue sur AppNote V1 ")
-btnGit= Button(text="Code Disponible sur GitHUB")
+Entrer = Label(text="Bienvenue sur AppNote Alpha 0.0.1 ")
+
 
 Entrer.pack()
 
