@@ -3,7 +3,7 @@ import tkinter
 from tkinter import *
 import os
 from tkinter import messagebox
-
+import webbrowser
 
 os.makedirs("AppNote", exist_ok=True)
 os.makedirs("AppNote/Parametre" ,exist_ok=True)
@@ -15,50 +15,44 @@ app.title("AppNote")
 app.iconbitmap("png.ico")
 
 
+def web():
+	webbrowser.open_new("https://github.com/Evox34/AppNote")
 
 # creation definition appuit and add a list to the listbox
 def appuit(event) :
-    NumNote = 0
+    
     list.insert("1", "Note:", var_entry.get())
+    print("create note ")
 
 
 
 
 
-class Sav():
-	#no-operational backup system
-    def __init__(self,TextList,Numéro):
-        self.textlist = TextList
-        self.number = Numéro
+	
 
 
 
 
-
-
-with open("data.App","wb") as fil:
-     Record = pickle.Pickler(fil)
-     Record.dump(Sav)
-
-
-def Supp(event) :
-	list.Supp("1")
+def clear(event) :
+	list.delete("1")
+	print("remove note ")
 
 
 # messagebox question
 
 def Show() :
-    result = messagebox.askquestion("Exit programe", "Vous voulez quittez le programe?", icon='warning')
+    result = messagebox.askquestion("Exit programe", "Are You Sure?", icon='warning')
     if result == 'yes' :
-        print("Programe stoper")
+        print("Programe stop")
         app.quit()
 
 
 # creation folder
 
 
-Entrer = Label(text="Bienvenue sur AppNote Alpha 0.0.1 ")
-
+Entrer = Label(text="Bienvenue sur AppNote  ")
+bntgit = Button(text="github",command=web)
+bntgit.pack()
 
 Entrer.pack()
 
@@ -68,16 +62,16 @@ list = Listbox(bg="#818181")
 list.insert("0", "Votre liste de note")
 
 var_entry = tkinter.StringVar()
-Sav = Sav(var_entry, 10)
+
 Entr = tkinter.Entry(app, textvariable=var_entry)
 textSav = var_entry.get()
 list.insert("1",)
-Entr.bind("<Up>", Supp)
-#  touch UP = function appuit
+ 
 Entr.bind("<Button-2>", appuit)
 #  touch Button2 = function appuit
 Entr.pack()
 
+Entr.bind("<Up>",clear)
 Text = tkinter.Label(app, textvariable=var_entry)
 
 Text.pack()
