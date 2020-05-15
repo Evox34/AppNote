@@ -6,7 +6,4 @@
 ### it allows you to write notes to a no-operational backup system
 
 
-## Planned  Alpha 0.1.1:
-### Systeme sav 
-### Syteme remove 
 
